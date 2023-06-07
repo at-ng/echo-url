@@ -1,7 +1,14 @@
 <script>
+let _navigator = {};
+for (var i in navigator) _navigator[i] = navigator[i];
+let _screen = {};
+for (var i in screen) _screen[i] = screen[i];
+
 document.write(
 '<pre>'+
-JSON.stringify( document.location, null, 2 )+
+JSON.stringify( document.location, null, 2 )+'\n'+
+JSON.stringify( _navigator, null, 2 )+'\n'+
+JSON.stringify( _screen, null, 2 )+'\n'+
 '</pre>'
 );
 </script>
